@@ -85,10 +85,14 @@ const cursos = [
 const estado = JSON.parse(localStorage.getItem("cursos_aprobados") || "{}");
 
 function renderMalla() {
-  const container = document.getElementById("malla-container");
-  container.innerHTML = "";
+  const fila1 = document.getElementById("fila-1");
+  const fila2 = document.getElementById("fila-2");
+  fila1.innerHTML = "";
+  fila2.innerHTML = "";
 
   for (let ciclo = 1; ciclo <= 10; ciclo++) {
+    const contenedor = ciclo <= 5 ? fila1 : fila2;
+
     const div = document.createElement("div");
     div.className = "ciclo";
 
@@ -101,6 +105,10 @@ function renderMalla() {
     cursosDelCiclo.forEach(curso => {
       const celda = document.createElement("div");
       celda.className = `curso ${curso.tipo}`;
+
+      if (curso.nombre.toLowerCase().includes("electivo")) {
+        celda.classList.add("electivo");
+      }
 
       const aprobado = estado[curso.codigo];
       const requisitosCumplidos = curso.requisitos.every(r => estado[r]);
@@ -123,7 +131,7 @@ function renderMalla() {
       div.appendChild(celda);
     });
 
-    container.appendChild(div);
+    contenedor.appendChild(div);
   }
 }
 
