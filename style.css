@@ -1,0 +1,65 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.tabla-malla {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.ciclo {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  min-width: 150px;
+  background-color: #fdfdfd;
+}
+
+.ciclo-header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.curso {
+  padding: 10px;
+  border-top: 1px solid #eee;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.curso.marketing {
+  background-color: #f2c1c1;
+}
+
+.curso.admin {
+  background-color: #bfc8ba;
+}
+
+.curso.bloqueado {
+  background-color: #e0e0e0 !important;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.curso.aprobado {
+  background-color: #b1e5a4 !important;
+  text-decoration: line-through;
+}
