@@ -79,7 +79,7 @@ const cursos = [
   { ciclo: 10, codigo: "ELEC8", nombre: "Electivo", requisitos: [], tipo: "admin" },
   { ciclo: 10, codigo: "ELEC9", nombre: "Electivo", requisitos: [], tipo: "admin" },
   { ciclo: 10, codigo: "ELEC10", nombre: "Electivo", requisitos: [], tipo: "admin" },
-);
+  ];
 
 // GUARDAR Y RENDERIZAR
 const estado = JSON.parse(localStorage.getItem("cursos_aprobados") || "{}");
