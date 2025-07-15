@@ -22,7 +22,7 @@ h1 {
   flex-direction: column;
   border: 1px solid #ccc;
   border-radius: 10px;
-  min-width: 150px;
+  min-width: 160px;
   background-color: #fdfdfd;
 }
 
@@ -46,11 +46,11 @@ h1 {
 }
 
 .curso.marketing {
-  background-color: #f2c1c1;
+  background-color: #f2c1c1; /* rosa suave */
 }
 
 .curso.admin {
-  background-color: #bfc8ba;
+  background-color: #bfc8ba; /* verde musgo */
 }
 
 .curso.bloqueado {
