@@ -4,82 +4,16 @@
   <meta charset="UTF-8">
   <title>Malla Curricular Adm. & Marketing</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      padding: 20px;
-      background-color: #f5f5f5;
-    }
-
-    h1 {
-      text-align: center;
-      color: #333;
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-    }
-
-    .tabla-malla {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .ciclo {
-      background-color: #ccc;
-      padding: 10px;
-      border-radius: 10px;
-      min-width: 150px;
-    }
-
-    .ciclo-header {
-      background-color: #444;
-      color: #fff;
-      padding: 8px;
-      text-align: center;
-      border-radius: 6px;
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
-
-    .curso {
-      background-color: #eee;
-      margin: 5px 0;
-      padding: 10px;
-      border-radius: 8px;
-      font-size: 1rem;
-      text-align: center;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .curso.admin {
-      background-color: #b2e0e7; /* baby blue */
-    }
-
-    .curso.marketing {
-      background-color: #f6c1e0; /* rosa suave */
-    }
-
-    .curso.electivo {
-      background-color: #dfb5e7; /* lila como imagen */
-    }
-
-    .curso.aprobado {
-      background-color: #fdf6e3 !important; /* color hueso */
-      text-decoration: line-through;
-      color: #888;
-    }
-
-    .curso.bloqueado {
-      opacity: 0.4;
-      cursor: not-allowed;
-    }
-  </style>
 </head>
 <body>
   <h1>Malla Curricular Adm. & Marketing</h1>
-  <div class="tabla-malla" id="malla-container"></div>
+
+  <!-- Nueva estructura de dos filas -->
+  <div id="malla-container">
+    <div id="fila-1" class="fila"></div>
+    <div id="fila-2" class="fila"></div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
