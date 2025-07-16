@@ -1,81 +1,84 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #e2f4e8; /* fondo verde jade claro */
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e6f7ef; /* verde jade muy claro */
   margin: 0;
   padding: 20px;
   text-align: center;
 }
 
 h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #333;
+  color: #222;
+  margin-bottom: 30px;
 }
 
-.malla-fila {
+#malla-container {
   display: flex;
   flex-direction: column;
   gap: 50px;
   align-items: center;
 }
 
-.tabla-malla {
+.fila {
   display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
   gap: 15px;
+  justify-content: center;
 }
 
 .ciclo {
-  background-color: white;
-  padding: 10px;
+  background-color: #fff;
   border-radius: 8px;
-  width: 130px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  padding: 10px;
+  width: 160px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .ciclo-header {
-  background-color: #444;
-  color: white;
-  padding: 8px;
-  border-radius: 6px;
+  background-color: #333;
+  color: #fff;
   font-weight: bold;
-  font-size: 18px;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
 }
 
 .curso {
-  padding: 10px;
-  font-size: 14px;
-  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 6px;
+  border-radius: 4px;
   cursor: pointer;
-  color: #333;
-  transition: transform 0.2s;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: transform 0.1s;
 }
 
 .curso:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .admin {
-  background-color: #b4e0e5; /* celeste bebé */
+  background-color: #fdf6e3; /* hueso */
+  color: #333;
 }
 
 .marketing {
-  background-color: #f78db7; /* rosa suave */
-}
-
-.aprobado {
-  background-color: #fdf6ee !important; /* color hueso */
-  font-weight: bold;
-}
-
-.bloqueado {
-  opacity: 0.5;
-  cursor: not-allowed;
+  background-color: #f9c0dd; /* rosado pastel */
+  color: #000;
 }
 
 .electivo {
-  background-color: #dfaddf !important; /* lila pastel */
+  background-color: #d8d5f5; /* lila */
+  color: #000;
+}
+
+.bloqueado {
+  background-color: #ccc;
+  color: #777;
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
+
+.aprobado {
+  background-color: #a8e6cf; /* verde suave aprobado */
+  font-weight: bold;
 }
