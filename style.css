@@ -1,88 +1,81 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #e6f7ef;
+  background-color: #e6f7ef; /* verde jade claro */
   margin: 0;
   padding: 40px;
   text-align: center;
 }
 
 h1 {
+  font-size: 32px;
   color: #222;
   margin-bottom: 40px;
-  font-size: 28px;
 }
 
 #malla-container {
   display: flex;
-  flex-direction: column;
-  gap: 60px;
-  align-items: center;
-}
-
-.fila {
-  display: flex;
-  gap: 40px; /* más espacio entre columnas */
   justify-content: center;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
 .ciclo {
   background-color: #fff;
   border-radius: 10px;
   padding: 16px;
-  width: 200px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .ciclo-header {
   background-color: #333;
   color: #fff;
-  font-weight: bold;
   padding: 10px;
   border-radius: 6px;
-  margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
 }
 
 .curso {
   padding: 12px;
   margin-bottom: 8px;
   border-radius: 6px;
+  font-size: 16px;          /* texto más grande */
+  font-weight: 600;
+  transition: transform 0.1s, opacity 0.2s;
   cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: transform 0.1s;
 }
 
-.curso:hover {
-  transform: scale(1.03);
+/* Color baby blue por defecto */
+.curso.admin {
+  background-color: #b4e0e5;
 }
 
-.admin {
-  background-color: #fdf6e3;
-  color: #333;
-}
-
-.marketing {
+/* Color rosita para marketing */
+.curso.marketing {
   background-color: #f9c0dd;
-  color: #000;
 }
 
-.electivo {
+/* Color lila para electivos */
+.curso.electivo {
   background-color: #d8d5f5;
-  color: #000;
 }
 
-.bloqueado {
-  background-color: #ccc;
-  color: #777;
+/* TACHADO y color hueso cuando está aprobado */
+.curso.aprobado {
+  background-color: #fdf6ee !important;
+  color: #555;
   text-decoration: line-through;
+}
+
+/* Bloqueado: más transparente */
+.curso.bloqueado {
+  opacity: 0.4;
   cursor: not-allowed;
 }
 
-.aprobado {
-  background-color: #a8e6cf;
-  font-weight: bold;
+/* Hover con efecto */
+.curso:hover:not(.bloqueado) {
+  transform: scale(1.03);
 }
-
